@@ -15,10 +15,10 @@ public class RadioButtonSelection {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.irctc.co.in/nget/train-search");
+		driver.get("https://firebasestorage.googleapis.com/v0/b/mycab-202b5.appspot.com/o/certificate.pdf?alt=media&token=86dd169f-f0eb-4064-b961-2084b86fa82d");
 		
 		Thread.sleep(1000);
-		WebElement radioBtn = driver.findElement(By.xpath("//*[@id=\"divMain\"]/div/app-main-page/div/div/div[1]/div[1]/div[1]/app-jp-input/div/form/div[4]/div/span[2]/label"));
+		WebElement radioBtn = driver.findElement(By.xpath("//*[@id=\"html\"]"));
 		radioBtn.click();
 		
 		Thread.sleep(2000);

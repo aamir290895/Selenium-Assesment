@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-22T21:13:46 IST" name="Default suite" finished-at="2021-11-22T21:15:42 IST" duration-ms="115637">
+  <suite started-at="2021-11-22T23:31:01 IST" name="Default suite" finished-at="2021-11-22T23:31:01 IST" duration-ms="5">
     <groups>
     </groups>
-    <test started-at="2021-11-22T21:13:46 IST" name="Default test" finished-at="2021-11-22T21:15:42 IST" duration-ms="115637">
-      <class name="com.selenium.testing.SeleniumTestingOne.MouseAction">
-        <test-method signature="mouseAction()[pri:0, instance:com.selenium.testing.SeleniumTestingOne.MouseAction@27ce24aa]" started-at="2021-11-22T21:13:46 IST" name="mouseAction" finished-at="2021-11-22T21:15:42 IST" duration-ms="115614" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mouseAction -->
-      </class> <!-- com.selenium.testing.SeleniumTestingOne.MouseAction -->
+    <test started-at="2021-11-22T23:31:01 IST" name="Default test" finished-at="2021-11-22T23:31:01 IST" duration-ms="5">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -15,10 +15,12 @@ public class DragAndDropTest {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://adept-stage-306721.web.app/");
+		driver.get("https://firebasestorage.googleapis.com/v0/b/mycab-202b5.appspot.com/o/certificate.pdf?alt=media&token=86dd169f-f0eb-4064-b961-2084b86fa82d");
 		
-		WebElement source = driver.findElement(By.xpath("/html/body/section/div/div[2]/div[1]/label"));
-		WebElement destination = driver.findElement(By.id("email"));
+		WebElement source = driver.findElement(By.id("ex2"));
+		source.sendKeys("input2");
+		Thread.sleep(1000);
+		WebElement destination = driver.findElement(By.id("ex1"));
 		
 		Actions action = new Actions(driver);
 		action.dragAndDrop(source, destination).build().perform();
