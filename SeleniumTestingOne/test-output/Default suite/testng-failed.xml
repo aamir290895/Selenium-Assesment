@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.testing.SeleniumTestingOne.DropDownTest">
+      <class name="com.selenium.testing.SeleniumTestingOne.MouseAction">
         <methods>
-          <include name="handleDropDown"/>
+          <include name="mouseAction"/>
         </methods>
-      </class> <!-- com.selenium.testing.SeleniumTestingOne.DropDownTest -->
+      </class> <!-- com.selenium.testing.SeleniumTestingOne.MouseAction -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
