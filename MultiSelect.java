@@ -13,7 +13,7 @@ public class MultiSelect {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-        driver.get("https://firebasestorage.googleapis.com/v0/b/mycab-202b5.appspot.com/o/certificate.pdf?alt=media&token=86dd169f-f0eb-4064-b961-2084b86fa82d");	
+        driver.get("https://mycab-202b5.web.app/");	
         
     	WebElement radioBtn = driver.findElement(By.xpath("//*[@id=\"html\"]"));
 		radioBtn.click();
