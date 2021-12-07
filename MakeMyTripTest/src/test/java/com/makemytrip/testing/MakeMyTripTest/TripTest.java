@@ -38,9 +38,10 @@ public class TripTest {
         {
         	String text=list.get(i).getText();
         	System.out.println("Text is" +text);
+        	list.get(i).click();
         	if(text.contains("Mumbai"))
         	{
-        		list.get(i).click();
+        		
         		break;
         	}
         }

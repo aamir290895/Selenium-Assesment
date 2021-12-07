@@ -54,12 +54,12 @@ public class RestClient {
 		 
 		 
 		 JSONObject json=new JSONObject();
-    	 json.put("name","aamir neova");
+    	 json.put("name","aamir");
 		 
     	 json.put("gender","male");
-		 json.put("email","neova2@gmail.com");
+		 json.put("email","neova22@gmail.com");
 		 json.put("status","active");
-		 RequestBody body = RequestBody.create(json.toString(),mediaType);
+		 RequestBody body = RequestBody.create(mediaType ,json.toString());
 //		 RequestBody body = RequestBody.create(mediaType, "{\r\n    \"name\": \"Tenali Ram\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"inhjhghs.demo@1.com\",\r\n    \"status\": \"active\"\r\n}");
 		 Request request = new Request.Builder()
 				  .url("https://gorest.co.in/public/v1/users")
@@ -73,7 +73,7 @@ public class RestClient {
 		 System.out.println("Response code is" + code);
 		
 			
-		 Assert.assertEquals(200, code);
+		 Assert.assertEquals(201, code);
 			
 	}
 	
@@ -104,6 +104,27 @@ public class RestClient {
 					
 				 Assert.assertEquals(200, code);
 		
+	}
+	
+	@Test
+	public void deleteMethod() throws IOException ,JSONException {
+		
+		         OkHttpClient client = new OkHttpClient().newBuilder()
+				  .build();
+			   	MediaType mediaType = MediaType.parse("text/plain");
+				RequestBody body = RequestBody.create(mediaType, "");
+				Request request = new Request.Builder()
+				  .url("https://gorest.co.in/public/v1/users/26")
+				  .method("DELETE", body)
+				  .addHeader("Authorization", "Bearer 3a319edad5387927771c3119e0d2960640c96800b2850deaf1e2b3faef1e34fb")
+				  .build();
+				Response response = client.newCall(request).execute();
+				 int code = response.code();
+
+				 System.out.println("Response code is" + code);
+				
+					
+				 Assert.assertEquals(204, code);
 	}
 
 }
