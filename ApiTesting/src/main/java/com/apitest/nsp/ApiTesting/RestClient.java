@@ -54,23 +54,26 @@ public class RestClient {
 		 
 		 
 		 JSONObject json=new JSONObject();
-    	 json.put("id","101");
+    	 json.put("name","aamir neova");
 		 
-    	 json.put("user_id",201);
-		 json.put("title","neova");
-		 json.put("body","active");
-		 RequestBody body = RequestBody.create(json.toString(), mediaType);
+    	 json.put("gender","male");
+		 json.put("email","neova2@gmail.com");
+		 json.put("status","active");
+		 RequestBody body = RequestBody.create(json.toString(),mediaType);
+//		 RequestBody body = RequestBody.create(mediaType, "{\r\n    \"name\": \"Tenali Ram\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"inhjhghs.demo@1.com\",\r\n    \"status\": \"active\"\r\n}");
 		 Request request = new Request.Builder()
-		   .url("https://gorest.co.in/public/v1/users")
-		   .method("POST", body)
-		   .build();
+				  .url("https://gorest.co.in/public/v1/users")
+				  .method("POST", body)
+				  .addHeader("Authorization", "Bearer 3a319edad5387927771c3119e0d2960640c96800b2850deaf1e2b3faef1e34fb")
+				  .addHeader("Content-Type", "application/json")
+				  .build();
 		 Response response = httpClient.newCall(request).execute();
 		 int code = response.code();
 
 		 System.out.println("Response code is" + code);
 		
 			
-		 Assert.assertEquals(401, code);
+		 Assert.assertEquals(200, code);
 			
 	}
 	
@@ -83,7 +86,7 @@ public class RestClient {
 				MediaType mediaType = MediaType.parse("text/plain");
 				 
 				 JSONObject json=new JSONObject();
-		    	 json.put("id","101");
+		    	 json.put("id","109");
 				 
 		    	 json.put("user_id",201);
 				 json.put("title","neova");

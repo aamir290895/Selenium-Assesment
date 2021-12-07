@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Aamir khan\AppData\Local\Temp\testng-eclipse--1481093458\testng-customsuite.xml</span>
+                    <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.apitest.nsp.ApiTesting.RestClient" class="method navigator-link" hash-for-method="patchMethod">patchMethod</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.apitest.nsp.ApiTesting.RestClient" class="method navigator-link" hash-for-method="postMethod">postMethod</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,21 +127,21 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="patchMethod">
-                  </a> <!-- patchMethod -->
-                  <span class="method-name">patchMethod</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [404] but found [200]
+                  <a name="postMethod">
+                  </a> <!-- postMethod -->
+                  <span class="method-name">postMethod</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [422] but found [200]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at com.apitest.nsp.ApiTesting.RestClient.patchMethod(RestClient.java:102)
+	at com.apitest.nsp.ApiTesting.RestClient.postMethod(RestClient.java:76)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -150,7 +150,7 @@
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
@@ -175,7 +175,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Aamir khan\AppData\Local\Temp\testng-eclipse--1481093458\testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse-748302463/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,7 +186,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.apitest.nsp.ApiTesting.RestClient&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;patchMethod&quot;/&gt;
+          &lt;include name=&quot;postMethod&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.apitest.nsp.ApiTesting.RestClient --&gt;
     &lt;/classes&gt;
@@ -230,14 +230,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'patchMethod')
+data.setCell(0, 1, 'postMethod')
 data.setCell(0, 2, 'com.apitest.nsp.ApiTesting.RestClient')
-data.setCell(0, 3, 1418);
+data.setCell(0, 3, 5435);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -260,7 +260,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">getMethod</span>
                 <br/>
-                <span class="ignored-method-name">postMethod</span>
+                <span class="ignored-method-name">patchMethod</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -276,7 +276,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">patchMethod</span>
+                <span class="method-name">postMethod</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

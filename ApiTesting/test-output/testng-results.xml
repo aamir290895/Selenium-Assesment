@@ -2,29 +2,29 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-06T23:13:52 IST" name="Default suite" finished-at="2021-12-06T23:13:54 IST" duration-ms="1450">
+  <suite started-at="2021-12-07T11:57:51 IST" name="Default suite" finished-at="2021-12-07T11:57:57 IST" duration-ms="5500">
     <groups>
     </groups>
-    <test started-at="2021-12-06T23:13:52 IST" name="Default test" finished-at="2021-12-06T23:13:54 IST" duration-ms="1450">
+    <test started-at="2021-12-07T11:57:51 IST" name="Default test" finished-at="2021-12-07T11:57:57 IST" duration-ms="5500">
       <class name="com.apitest.nsp.ApiTesting.RestClient">
-        <test-method signature="patchMethod()[pri:0, instance:com.apitest.nsp.ApiTesting.RestClient@670002]" started-at="2021-12-06T23:13:52 IST" name="patchMethod" finished-at="2021-12-06T23:13:54 IST" duration-ms="1418" status="FAIL">
+        <test-method signature="postMethod()[pri:0, instance:com.apitest.nsp.ApiTesting.RestClient@7692d9cc]" started-at="2021-12-07T11:57:51 IST" name="postMethod" finished-at="2021-12-07T11:57:57 IST" duration-ms="5435" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [404] but found [200]]]>
+              <![CDATA[expected [422] but found [200]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+              <![CDATA[java.lang.AssertionError: expected [422] but found [200]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:907)
 at org.testng.Assert.assertEquals(Assert.java:917)
-at com.apitest.nsp.ApiTesting.RestClient.patchMethod(RestClient.java:102)
+at com.apitest.nsp.ApiTesting.RestClient.postMethod(RestClient.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
@@ -33,7 +33,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
@@ -54,7 +54,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- patchMethod -->
+        </test-method> <!-- postMethod -->
       </class> <!-- com.apitest.nsp.ApiTesting.RestClient -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

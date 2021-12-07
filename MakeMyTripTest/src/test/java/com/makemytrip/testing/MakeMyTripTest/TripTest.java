@@ -22,30 +22,70 @@ public class TripTest {
         Thread.sleep(1000);
         WebElement elementPopup =driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[1]/ul/li[3]"));
         elementPopup.click();
-        
-		WebElement element = driver.findElement(By.xpath("//li[@data-cy ='roundTrip']//span"));
+       	WebElement element = driver.findElement(By.xpath("//li[@data-cy ='roundTrip']//span"));
 		element.click();
+		Thread.sleep(2000);
+		WebElement element1 = driver.findElement(By.xpath("//li[@data-cy ='oneWayTrip']//span"));
+		element1.click();
+		Thread.sleep(2000);
 		
-//		Thread.sleep(500);
-//		driver.findElement(By.xpath("//li[@data-cy ='mulitiCityTrip']//span")).click();
-//		
-	     Actions action=new Actions(driver);
-		 driver.findElement(By.id("fromCity")).click();
-	     action.sendKeys("Mumbai").perform();
-	  
-
-		 action.sendKeys(Keys.ENTER).perform();
-		 Thread.sleep(3000);
-		
-//		driver.findElement(By.id("fromCity")).click();
-////		driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-0-item-0\"]/div/div[1]/p[1]"));
-	    driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-0-item-2\"]/div/div[1]/p[1]")).click();
-//		action.sendKeys(Keys.ENTER).perform();
-
+        driver.findElement(By.xpath("//div[@class=\"fsw_inputBox searchCity inactiveWidget \"]/label")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class=\"hsw_autocomplePopup autoSuggestPlugin \"]/div/input")).sendKeys("Kolkata");
+        List<WebElement>list=driver.findElements(By.cssSelector("p[class=\"font14 appendBottom5 blackText\"]"));
+        
+        for(int i=0;i<list.size();i++)
+        {
+        	String text=list.get(i).getText();
+        	System.out.println("Text is" +text);
+        	if(text.contains("Mumbai"))
+        	{
+        		list.get(i).click();
+        		break;
+        	}
+        }
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//span[text()='To']")).click();
+        
+        //Thread.sleep(2000);
+       // driver.findElement(By.xpath("//input[@placeholder=\"To\"]")).sendKeys("Delhi");
+        
+        WebElement to = driver.findElement(By.xpath("//input[@placeholder=\"To\"]"));
+        to.sendKeys("Delhi");
+        //to.sendKeys(Keys.ARROW_DOWN);
+        //to.sendKeys(Keys.ENTER);
+        to.click();
+       
+        
+     List<WebElement>list1=driver.findElements(By.cssSelector("p[class=\"font14 appendBottom5 blackText\"]"));
+        for(int j=0;j<list1.size();j++)
+       {
+       	String text=list1.get(j).getText();
+       	System.out.println("Text is" +text);
+       	if(text.contains("Delhi"))
+       	{
+       		list1.get(j).click();
+       		break;
+        	}
+      // 	Thread.sleep(2000);
+       	
+       	
+      	driver.findElement(By.xpath("//span[contains(text(),'DEPARTURE')]")).click();
+      	Thread.sleep(2000);
+      	
+      	driver.findElement(By.xpath("//div[@class=\"DayPicker-Day\"][contains(@aria-label,'Dec 24 2021')]")).click();
+        
+      	Thread.sleep(2000);
+      	
+      	
+      	//WebElement search = driver.findElement(By.xpath("//p[@data-cy=\"submit\"]/a "));
+      	WebElement search = driver.findElement(By.xpath("//a[@class=\"primaryBtn font24 latoBold widgetSearchBtn \"] "));
+      	search.click();
 				
 		
 		Thread.sleep(1000);
-	    driver.close();
+		driver.close();
+       }
 		
 		
 	}
