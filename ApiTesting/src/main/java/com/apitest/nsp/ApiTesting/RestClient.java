@@ -34,10 +34,12 @@ public class RestClient {
 		int code = response.code();
 	
 		String responseBody = response.body().string();
-		System.out.println("Response code is" + responseBody);
+		System.out.println("Response body is" + responseBody);
+		System.out.println("Response code is" + code);
+
 	
 		
-		Assert.assertEquals(200, code);
+		Assert.assertEquals(201, code);
 		
 		
 		 
