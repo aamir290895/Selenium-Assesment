@@ -2,12 +2,12 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-08T10:27:35 IST" name="Default suite" finished-at="2021-12-08T10:27:40 IST" duration-ms="5074">
+  <suite started-at="2021-12-09T15:16:37 IST" name="Default suite" finished-at="2021-12-09T15:16:42 IST" duration-ms="5000">
     <groups>
     </groups>
-    <test started-at="2021-12-08T10:27:35 IST" name="Default test" finished-at="2021-12-08T10:27:40 IST" duration-ms="5074">
+    <test started-at="2021-12-09T15:16:37 IST" name="Default test" finished-at="2021-12-09T15:16:42 IST" duration-ms="5000">
       <class name="com.apitest.nsp.ApiTesting.RestClient">
-        <test-method signature="getMethod()[pri:0, instance:com.apitest.nsp.ApiTesting.RestClient@75f32542]" started-at="2021-12-08T10:27:35 IST" name="getMethod" finished-at="2021-12-08T10:27:40 IST" duration-ms="5018" status="PASS">
+        <test-method signature="getMethod()[pri:0, instance:com.apitest.nsp.ApiTesting.RestClient@75f32542]" started-at="2021-12-09T15:16:37 IST" name="getMethod" finished-at="2021-12-09T15:16:42 IST" duration-ms="4906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMethod -->

@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TripTest {
 	
 	@Test
-	public static void main(String[] args)throws InterruptedException {
+	public static void tripTest()throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
         driver.get("https://www.makemytrip.com/");

@@ -39,7 +39,7 @@ public class RestClient {
 
 	
 		
-		Assert.assertEquals(201, code);
+		Assert.assertEquals(200, code);
 		
 		
 		 
