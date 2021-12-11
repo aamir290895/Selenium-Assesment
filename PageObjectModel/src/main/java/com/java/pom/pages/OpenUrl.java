@@ -13,25 +13,29 @@ public class OpenUrl {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
-		search(driver);
 	}
 	
+//
+//	
+//	public static WebElement search(WebDriver driver) throws InterruptedException {
+//		WebDriverManager.chromedriver().setup();
+//		driver = new ChromeDriver();
+//		driver.get("https://www.rgpv.ac.in/");
+//		WebElement element = driver.findElement(By.xpath("//*[@id=\"alert-modal\"]/div/div/div[1]/a/i"));
+//		Thread.sleep(2000);
+//		element.click();
+//		return element;
+//		
+//	}
 
-	
-	public static WebElement search(WebDriver driver) throws InterruptedException {
+	public static WebDriver driver() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://www.rgpv.ac.in/");
-		WebElement element = driver.findElement(By.xpath("//*[@id=\"alert-modal\"]/div/div/div[1]/a/i"));
-		Thread.sleep(2000);
-		element.click();
-		return element;
+		driver.get("https://www.cleartrip.com/");
+		driver.manage().window().maximize();
 		
+		return driver;
 	}
-	public static void go() {
-		System.out.println("hello");
-	}
-	
 
 	
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-12-11T17:26:35 IST" name="Default suite" finished-at="2021-12-11T17:28:21 IST" duration-ms="105544">
+    <groups>
+    </groups>
+    <test started-at="2021-12-11T17:26:35 IST" name="Default test" finished-at="2021-12-11T17:28:21 IST" duration-ms="105544">
+      <class name="com.java.pom.PageObjectModel.Test1">
+        <test-method signature="planTrip()[pri:0, instance:com.java.pom.PageObjectModel.Test1@bef2d72]" started-at="2021-12-11T17:26:35 IST" name="planTrip" finished-at="2021-12-11T17:28:21 IST" duration-ms="105471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- planTrip -->
+      </class> <!-- com.java.pom.PageObjectModel.Test1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
