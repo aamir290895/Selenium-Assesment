@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.selenium.testing.SeleniumTestingOne.MouseAction"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.MultiSelect"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.AllLinks"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.CheckBoxSelection"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.TestTwo"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.DragAndDropTest"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.AppTest"/>
+      <class name="com.selenium.testing.SeleniumTestingOne.RadioButtonSelection"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

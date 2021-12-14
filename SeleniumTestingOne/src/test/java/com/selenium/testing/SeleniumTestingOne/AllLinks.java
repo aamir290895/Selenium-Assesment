@@ -1,5 +1,6 @@
 package com.selenium.testing.SeleniumTestingOne;
 
+import org.testng.annotations.Test;
 import java.util.List;
 
 import org.openqa.selenium.By;
