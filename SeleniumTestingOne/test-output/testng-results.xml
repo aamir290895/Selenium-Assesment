@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-14T14:21:42 IST" name="Default suite" finished-at="2021-12-14T14:22:48 IST" duration-ms="66013">
+  <suite started-at="2021-12-15T17:04:52 IST" name="Default suite" finished-at="2021-12-15T17:05:18 IST" duration-ms="26698">
     <groups>
     </groups>
-    <test started-at="2021-12-14T14:21:42 IST" name="Default test" finished-at="2021-12-14T14:22:48 IST" duration-ms="66013">
+    <test started-at="2021-12-15T17:04:52 IST" name="Default test" finished-at="2021-12-15T17:05:18 IST" duration-ms="26698">
       <class name="com.selenium.testing.SeleniumTestingOne.DropDownTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.selenium.testing.SeleniumTestingOne.DropDownTest@6ef888f6]" started-at="2021-12-14T14:21:42 IST" name="startDriver" finished-at="2021-12-14T14:22:45 IST" duration-ms="62934" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:com.selenium.testing.SeleniumTestingOne.DropDownTest@bef2d72]" started-at="2021-12-15T17:04:52 IST" name="startDriver" finished-at="2021-12-15T17:05:18 IST" duration-ms="26588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="dropDown()[pri:0, instance:com.selenium.testing.SeleniumTestingOne.DropDownTest@6ef888f6]" started-at="2021-12-14T14:22:45 IST" name="dropDown" finished-at="2021-12-14T14:22:48 IST" duration-ms="3012" status="FAIL">
+        <test-method signature="dynamicDropDown()[pri:0, instance:com.selenium.testing.SeleniumTestingOne.DropDownTest@bef2d72]" started-at="2021-12-15T17:05:18 IST" name="dynamicDropDown" finished-at="2021-12-15T17:05:18 IST" duration-ms="24" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.selenium.testing.SeleniumTestingOne.DropDownTest.dropDown(DropDownTest.java:30)
+at com.selenium.testing.SeleniumTestingOne.DropDownTest.dynamicDropDown(DropDownTest.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,7 +49,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropDown -->
+        </test-method> <!-- dynamicDropDown -->
       </class> <!-- com.selenium.testing.SeleniumTestingOne.DropDownTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

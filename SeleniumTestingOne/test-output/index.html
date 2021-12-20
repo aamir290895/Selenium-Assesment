@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.selenium.testing.SeleniumTestingOne.DropDownTest" class="method navigator-link" hash-for-method="dropDown">dropDown</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.selenium.testing.SeleniumTestingOne.DropDownTest" class="method navigator-link" hash-for-method="dynamicDropDown">dynamicDropDown</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,11 +127,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="dropDown">
-                  </a> <!-- dropDown -->
-                  <span class="method-name">dropDown</span>
+                  <a name="dynamicDropDown">
+                  </a> <!-- dynamicDropDown -->
+                  <span class="method-name">dynamicDropDown</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at com.selenium.testing.SeleniumTestingOne.DropDownTest.dropDown(DropDownTest.java:30)
+	at com.selenium.testing.SeleniumTestingOne.DropDownTest.dynamicDropDown(DropDownTest.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -169,7 +169,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-960246719/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse-89941950/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -178,7 +178,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.selenium.testing.SeleniumTestingOne.DropDownTest&quot;/&gt;
+      &lt;class name=&quot;com.selenium.testing.SeleniumTestingOne.DropDownTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;dynamicDropDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.selenium.testing.SeleniumTestingOne.DropDownTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -220,14 +224,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dropDown')
+data.setCell(0, 1, 'dynamicDropDown')
 data.setCell(0, 2, 'com.selenium.testing.SeleniumTestingOne.DropDownTest')
-data.setCell(0, 3, 3012);
+data.setCell(0, 3, 24);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 24 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -261,8 +265,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">dropDown</span>
-                <span class="method-start">62936 ms</span>
+                <span class="method-name">dynamicDropDown</span>
+                <span class="method-start">26590 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

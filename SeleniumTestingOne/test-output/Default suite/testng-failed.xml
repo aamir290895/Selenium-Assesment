@@ -6,7 +6,7 @@
       <class name="com.selenium.testing.SeleniumTestingOne.DropDownTest">
         <methods>
           <include name="startDriver"/>
-          <include name="dropDown"/>
+          <include name="dynamicDropDown"/>
         </methods>
       </class> <!-- com.selenium.testing.SeleniumTestingOne.DropDownTest -->
     </classes>
