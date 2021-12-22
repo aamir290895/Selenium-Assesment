@@ -19,7 +19,7 @@ public class DropDownTest {
 	    public static void startDriver() {
 			
 			WebDriverManager.chromedriver().setup();
-			ChromeDriver driver = new ChromeDriver();
+		    driver = new ChromeDriver();
 			driver.get("https://www.makemytrip.com/");
 			driver.manage().window().maximize();
 	    	

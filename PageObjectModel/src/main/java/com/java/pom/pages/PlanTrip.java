@@ -7,37 +7,30 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class PlanTrip {
 
-	public static OpenUrl open;
-
-	public static WebDriver wDriver;
+    private static Base base;
+    private static WebDriver driver = null;
 
 	@Test
-	public static void main(String[] args) throws InterruptedException {
-
-		closeNotice();
-
+	public static void closeNotice(WebDriver driver) throws InterruptedException {
+		base.driver();
+		base.trip();
+		base.findSource(driver);
+		Thread.sleep(1000);
+		
+		
 	}
-
-	@Test
-	public static void closeNotice() throws InterruptedException {
-		wDriver = open.driver();
-		WebElement element1 = wDriver
-				.findElement(By.xpath("(//input[@placeholder='Any worldwide city or airport' ])[1]"));
-		element1.sendKeys("Jabalpur");
-		Thread.sleep(3000);
-
-	   
-	    Select jabalpur = new Select(wDriver.findElement(By.xpath("//p[@class = \"to-ellipsis o-hidden ws-nowrap c-inherit fs-3\"]")));
-//		List<WebElement> list = wDriver.findElement(By.xpath(
-//				"//p[@class = \"to-ellipsis o-hidden ws-nowrap c-inherit fs-3\"][contains(text(),"Jabalpur, IN - Jabalpur (JLR)")]"))
-//				.findElements(By.tagName("li"));
-//		for(int i=0; i<list.size();i++) {
-//			list.get(0).click();
-//		}
-	   jabalpur.selectByIndex(0);
+	
+	
+	public static void main(String[] args) {
+		driver = base.driver();
+//		
+     
+		base.trip();
+		
 	}
 }
