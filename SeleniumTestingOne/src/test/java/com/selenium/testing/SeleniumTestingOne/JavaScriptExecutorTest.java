@@ -14,6 +14,13 @@ public class JavaScriptExecutorTest {
 	
 	static WebDriver driver;
 	
+	
+	public static void main(String[] args) {
+		startDriver();
+		javascriptExecute();
+		
+	}
+	
 	@BeforeMethod
 	public static void startDriver() {
 		
@@ -25,12 +32,12 @@ public class JavaScriptExecutorTest {
 	}
 	
 	@Test
-	public static void main(String[] args) {
+	public static void javascriptExecute() {
 		
 		WebElement element = driver.findElement(By.id("email"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("document.getElementById('email').value ='aamir@gmail.com'");
-		js.executeScript("arguments[0].value ='aamir@gmail.com'", element);
+		js.executeScript("document.getElementById('email').value ='aamir@gmail.com'");
+//		js.executeScript("arguments[0].value ='aamir@gmail.com'", element);
 	}
 
 }

@@ -16,12 +16,14 @@ public class DropDownTest {
 	    private static WebDriver driver; 
 	
 	    @BeforeMethod
-	    public static void startDriver() {
+	    public static void startDriver() throws Exception{
 			
 			WebDriverManager.chromedriver().setup();
 		    driver = new ChromeDriver();
 			driver.get("https://www.makemytrip.com/");
 			driver.manage().window().maximize();
+			driver.manage().wait(1000);
+			
 	    	
 	    	
 	    }

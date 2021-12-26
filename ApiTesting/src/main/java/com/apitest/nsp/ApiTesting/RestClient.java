@@ -111,7 +111,7 @@ public class RestClient {
 	@Test
 	public void deleteMethod() throws IOException ,JSONException {
 		
-		         OkHttpClient client = new OkHttpClient().newBuilder()
+		        OkHttpClient client = new OkHttpClient().newBuilder()
 				  .build();
 			   	MediaType mediaType = MediaType.parse("text/plain");
 				RequestBody body = RequestBody.create(mediaType, "");
@@ -120,7 +120,7 @@ public class RestClient {
 				  .method("DELETE", body)
 				  .addHeader("Authorization", "Bearer 3a319edad5387927771c3119e0d2960640c96800b2850deaf1e2b3faef1e34fb")
 				  .build();
-				Response response = client.newCall(request).execute();
+				 Response response = client.newCall(request).execute();
 				 int code = response.code();
 
 				 System.out.println("Response code is" + code);

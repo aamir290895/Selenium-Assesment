@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.testing.MakeMyTripTest.TripTest">
+      <class name="com.makemytrip.testing.MakeMyTripTest.PlanTrip">
         <methods>
-          <include name="tripTest"/>
+          <include name="closeDriver"/>
+          <include name="startDriver"/>
+          <include name="planTrip"/>
         </methods>
-      </class> <!-- com.makemytrip.testing.MakeMyTripTest.TripTest -->
+      </class> <!-- com.makemytrip.testing.MakeMyTripTest.PlanTrip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

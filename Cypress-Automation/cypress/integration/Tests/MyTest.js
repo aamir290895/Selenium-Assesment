@@ -9,7 +9,7 @@ it ('login',()=>{
     cy.get('#email').type(`${newItem}`);
     cy.get('#pass').type(`${pswd}`);
     cy.wait(1000);
-    cy.get('#loginbutton').click();
+    cy.get("[name='login']").click();
 
 })
 

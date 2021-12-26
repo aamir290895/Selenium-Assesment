@@ -1,74 +1,57 @@
 package com.java.pom.pages;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.netty.util.Timeout;
 
 public class Base {
 
-	static WebDriver driver = null;
-	private static WebElement element = null;
+	static WebDriver driver;
 
-	private static By source = By.xpath("//input[@placeholder='Any worldwide city or airport' and @xpath='1']");
+	@FindBy(how =How.ID_OR_NAME, using = "email")
+	private static WebElement email;
 
-	private static By destination = By.xpath("//input[@placeholder='Any worldwide city or airport' and @xpath='2']");
-	
-	private static By tripType = By.xpath("//*[@class='radio__circle bs-border bc-neutral-500 bw-1 ba' and @xpath='1']");
+	@FindBy(how = How.ID, using = "pass" )
+	private static WebElement password;
 
-	
-	private static By selectDate = By.xpath("//*[@class='p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip']");
-    
-	private static By list = By.xpath("//li[@class='ls-reset br-4 w-100p px-2 dropdown__item c-neutral-900 fs-3 hover:bg-secondary-500 hover:c-white c-pointer']");
+	@FindBy(how = How.CSS, using = "[name='login']")
+	private static WebElement login;
 
-
-	public static WebDriver driver() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.get("https://www.cleartrip.com/");
-		driver.manage().window().maximize();
-
-		return driver;
-	}
-	
-	
-	public static void trip () {
-
-		element = driver.findElement(tripType);
+	public Base (WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 
 	}
 
-	public static WebElement findSource(WebDriver driver) {
-
-		element = driver.findElement(source);
-		element.sendKeys("Jabalpur");
-	    List<WebElement> li = driver.findElements(list);
-		for(WebElement ele : li) {
-			Select select = new Select(ele);
-			select.selectByValue("Jabalpur, IN - Jabalpur (JLR)");
-			
-		}
-
-		return element;
+	public static void inputEmail(String em) {
+     
+		email.sendKeys(em);
 	}
 
-	public static WebElement findDestination (WebDriver driver) {
+	public static void inputPassword(String pass) {
 
-		element = driver.findElement(destination);
-
-		return element;
-	}
-	
-	public static WebElement datePick (WebDriver driver) {
-
-		element = driver.findElement(selectDate);
-
-		return element;
+		password.sendKeys(pass);
 	}
 
+	public static void login() {
+
+		login.click();
+	}
 }
