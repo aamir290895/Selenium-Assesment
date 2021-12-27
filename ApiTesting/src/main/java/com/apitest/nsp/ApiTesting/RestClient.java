@@ -61,7 +61,7 @@ public class RestClient {
     	 json.put("gender","male");
 		 json.put("email","neova22@gmail.com");
 		 json.put("status","active");
-		 RequestBody body = RequestBody.create(mediaType ,json.toString());
+		 RequestBody body = RequestBody.create(MediaType.parse("application/json") ,json.toString());
 //		 RequestBody body = RequestBody.create(mediaType, "{\r\n    \"name\": \"Tenali Ram\",\r\n    \"gender\": \"male\",\r\n    \"email\": \"inhjhghs.demo@1.com\",\r\n    \"status\": \"active\"\r\n}");
 		 Request request = new Request.Builder()
 				  .url("https://gorest.co.in/public/v1/users")
@@ -116,7 +116,7 @@ public class RestClient {
 			   	MediaType mediaType = MediaType.parse("text/plain");
 				RequestBody body = RequestBody.create(mediaType, "");
 				Request request = new Request.Builder()
-				  .url("https://gorest.co.in/public/v1/users/26")
+				  .url("https://gorest.co.in/public/v1/users/27")
 				  .method("DELETE", body)
 				  .addHeader("Authorization", "Bearer 3a319edad5387927771c3119e0d2960640c96800b2850deaf1e2b3faef1e34fb")
 				  .build();

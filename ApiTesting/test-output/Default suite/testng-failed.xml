@@ -5,7 +5,7 @@
     <classes>
       <class name="com.apitest.nsp.ApiTesting.RestClient">
         <methods>
-          <include name="postMethod"/>
+          <include name="deleteMethod"/>
         </methods>
       </class> <!-- com.apitest.nsp.ApiTesting.RestClient -->
     </classes>
