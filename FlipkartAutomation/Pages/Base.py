@@ -19,7 +19,11 @@ class BasePage():
         WebDriverWait(self.driver,10).until(lambda d : d.find_element(By.XPATH,by_locator)).send_keys(keys)
 
     def get_element(self,by_locator):
-        element=WebDriverWait(self.driver,10).until(lambda d : d.find_element(By.XPATH,by_locator))
+        element = WebDriverWait(self.driver,10).until(lambda d : d.find_element(By.XPATH,by_locator))
         return element
-
-
+    def window_switch(self):
+        handles = self.driver.window_handles
+        for handle in handles:
+            if handle != self.driver.current_window_handle:
+                self.driver.switch_to.window(handle)
+            break

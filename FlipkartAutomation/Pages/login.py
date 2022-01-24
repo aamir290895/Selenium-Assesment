@@ -1,3 +1,4 @@
+import time
 
 from Pages.Base import BasePage
 from config.TestData import TestData
@@ -12,4 +13,5 @@ class Login(BasePage):
         self.just_click(self.use_locator.LOGIN)
         self.do_send_keys( self.use_locator.USER_NAME_LOCATOR, username)
         self.do_send_keys( self.use_locator.PASSWORD_LOCATOR, password)
+        time.sleep(2)
         self.just_click(self.use_locator.LOGIN_BUTTON_LOCATOR)
